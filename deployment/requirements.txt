@@ -1,0 +1,4 @@
+transformers==4.41.2
+kserve==0.11.2
+torch @ https://download.pytorch.org/whl/cu121/torch-2.3.0%2Bcu121-cp310-cp310-linux_x86_64.whl#sha256=0a12aa9aa6bc442dff8823ac8b48d991fd0771562eaa38593f9c8196d65f7007
+sacremoses==0.1.1
