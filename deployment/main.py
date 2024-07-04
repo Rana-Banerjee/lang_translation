@@ -79,7 +79,7 @@ class MyModel(Model):
     def load(self):
         """Reconstitute model from disk."""
         # Load model and tokenizer
-        self.tokenizer = NllbTokenizerFast.from_pretrained(MODEL_DIR, truncation=True,,additional_special_tokens=FAIRSEQ_LANGUAGE_CODES)
+        self.tokenizer = NllbTokenizerFast.from_pretrained(MODEL_DIR, truncation=True,additional_special_tokens=FAIRSEQ_LANGUAGE_CODES)
         self.tokenizer.src_lang='dyu_Latn'
         self.tokenizer.tgt_lang='fra_Latn'
         self.model=AutoModelForSeq2SeqLM.from_pretrained(MODEL_DIR,torch_dtype=torch.float16).to(self.device_type).eval()
